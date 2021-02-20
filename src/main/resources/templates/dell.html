@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      taglib uri="http://www.springframework.org/tags/form" prefix="form" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/deleting}"  th:object="${person}">
+    <label for="id">Enter id</label>
+    <input type="text" th:field="*{id}" id="id"/>
+    <br/>
+    <button type="submit">Delete</button>
+</form>
+</body>
+</html>
